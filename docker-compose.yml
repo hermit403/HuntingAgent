@@ -1,0 +1,17 @@
+services:
+  huntingagent:
+    build: .
+    container_name: huntingagent
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_BASE_URL=${OPENAI_BASE_URL}
+      - OPENAI_MODEL=${OPENAI_MODEL}
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - DATABASE_URL=sqlite:////app/internal_db/huntingagent.db
+      - TOOL_TIMEOUT=30
+      - TOOL_MAX_MEMORY=256M
+    mem_limit: 256m
+    memswap_limit: 256m
+    restart: unless-stopped
