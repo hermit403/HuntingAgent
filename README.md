@@ -5,6 +5,8 @@ HuntingAgent 是一个基于多Agent协同的轻量级代码审计系统。
   <img src="https://skillicons.dev/icons?i=python,fastapi,vue,vite,ts,nodejs,docker" />
 </p>
 
+讲解PPT在根目录下
+
 ## 环境要求
 
 - Docker 20.10+
